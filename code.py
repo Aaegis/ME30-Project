@@ -4,9 +4,19 @@ from func import *
 from classes import *
 from adafruit_circuitplayground import cp
 
-#############
-numOfRounds = 10
-#############
+# This function handles getting user input for the amount of rounds they want to play.
+# This function is here instead of in func.py because func.py throws a MemoryError (I'm too full...)
+def getRounds():
+    while True:
+    # If the user enters a non-integer or a value of less than 1 then they will be asked to try again.
+        try:
+            userNumRounds = int(input("Enter # of rounds: "))
+            if userNumRounds <= 0:
+                raise Exception("# of rounds must be >0")
+            break
+        except Exception:
+            print("Please enter valid number")
+    return userNumRounds
 
 # These are functions that were imported from func.py as well as classses that were imported from classes.py
 # A second/third file is necessary because having all the code in one file would result in a memory error due to the sheer size of the file and also because it is more organized.
@@ -16,10 +26,10 @@ audio = audio()
 # This list will hold the user's inputs
 userList = []
 
-# Generate a list of random colors for the game
+# Generate a list of random colors for the game by asking for user input
 colorList = []
 colors = ("red", "yellow", "green", "blue")
-for i in range(numOfRounds):
+for i in range(getRounds()):
     colorList.append(colors[random.randint(0,3)])
 
 # Output the list for debugging purposes DEBUG ONLY
@@ -60,7 +70,7 @@ while True:
         userList = []
         colorList = []
         colors = ("red", "yellow", "green", "blue")
-        for i in range(numOfRounds):
+        for i in range(getRounds()):
             colorList.append(colors[random.randint(0,3)])
 
     # This runs if the game is started (button B is pressed)
@@ -90,7 +100,6 @@ while True:
             # If the list equals the list of all the generated colors up to the current level, then execute the following.
             # By executing the following, it "unpauses" the game and allows it to display the next level of colors
             elif userList == colorList[0:level] and len(userList) == len(colorList[0:level]):
-                print(userList, "is equal to", colorList[0:level])
                 pause = False
                 userList = []
                 time.sleep(1)
