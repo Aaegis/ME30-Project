@@ -2,10 +2,10 @@
 Sec 04
 
 # DEVELOPERS
-Kenny
-Heidi
-Jairus
-AI was **NOT** used in this project in any capacity.
+- Kenny
+- Heidi
+- Jairus
+(AI was **NOT** used in this project in any capacity.)
 
 A simon says game intended for use on a CPX board. Final project for ME30 Lab at SJSU. Made by Kenny, Heidi, and Jairus.
 
