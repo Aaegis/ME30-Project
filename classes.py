@@ -10,12 +10,7 @@ class pixel:
     # Example:
     # pixel.color(5, "blue") will set the SIXTH pixel on the CPX board to turn blue.
 
-
     def color(pixelID: int, color: str):
-
-        forceLower = (
-            color.lower()
-        )  # for flexibility, set the string argument to be all lowercase.
 
         # valid inputs for the color argument are "red", "yellow", "green", "blue"
         colorDict = {
@@ -25,15 +20,12 @@ class pixel:
             "blue": (0, 150, 255)
         }
 
-        cp.pixels[pixelID] = colorDict[forceLower]
+        cp.pixels[pixelID] = colorDict[color]
 
     # Works the same as color(), but doesn't take an input for the pixelID and just sets all pixels to the inputted color.
     # This is good for flashing the board in the case of a win/loss.
 
     def colorAll(self, color: str):
-        forceLower = (
-            color.lower()
-        )  # for flexibility, set the string argument to be all lowercase.
 
         # valid inputs for the color argument are "red", "yellow", "green", "blue"
         colorDict = {
@@ -43,15 +35,11 @@ class pixel:
             "blue": (0, 150, 255)
         }
 
-        cp.pixels.fill(colorDict[forceLower])
+        cp.pixels.fill(colorDict[color])
 
     # Exact same as color(), but just uses darker colors. Useful for showing the available colors on the board.
 
     def colorDark(pixelID: int, color: str):
-
-        forceLower = (
-            color.lower()
-        )  # for flexibility, set the string argument to be all lowercase.
 
         # valid inputs for the color argument are "red", "yellow", "green", "blue"
         colorDict = {
@@ -61,7 +49,7 @@ class pixel:
             "blue": (0, 7, 20)
         }
 
-        cp.pixels[pixelID] = colorDict[forceLower]
+        cp.pixels[pixelID] = colorDict[color]
 
     # This function is simple; it just handles turning off pixels.
     # It works by setting their RGB value to (0, 0, 0).
