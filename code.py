@@ -5,7 +5,7 @@ from classes import *
 from adafruit_circuitplayground import cp
 
 #############
-numOfRounds = 5
+numOfRounds = 10
 #############
 
 # These are functions that were imported from func.py as well as classses that were imported from classes.py
