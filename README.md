@@ -14,7 +14,7 @@ Sec 04
 
 # GAMEPLAY
 - When you first run the code, it will ask for an input in the terminal. Enter a positive non-zero integer. This will be the amount of rounds you want to play.
-- You must turn the board "on" via the switch. If the switch is on the right, it is OFF. IF the switch is on the left, it is on. A little jingle will play if the board is on and then the Neo-pixels will flash green. The board is capable of starting in the ON position.
+- You must turn the board "on" via the switch. If the switch is on the right, it is OFF. If the switch is on the left, it is on. A little jingle will play if the board is on and then the Neo-pixels will flash green. The board is capable of starting in the ON position.
 - NOTE: Turning the switch back off will play that same jingle backwards and then flash the lights red. The board will then have none of the Neo-pixels illuminated.
 - The right button (D5) will start the game.
 - The left button (D4) will reset the game.
