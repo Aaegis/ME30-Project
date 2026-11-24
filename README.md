@@ -1,6 +1,6 @@
 # ME30-Project
 Sec 04
-A simon says game intended for use on a CPX board. Final project for ME30 Lab at SJSU. Made by Kenny, Heidi, and Jairus.
+- A simon says game intended for use on a CPX board. Final project for ME30 Lab at SJSU. Made by Kenny, Heidi, and Jairus.
 
 # DEVELOPERS
 - Kenny
